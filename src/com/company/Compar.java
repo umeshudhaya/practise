@@ -32,7 +32,7 @@ public class Compar {
         List extractss=al.subList(0,4);
         System.out.println("after extract"+extractss);
     */
-        ArrayList al2=new ArrayList();
+        ArrayList  al2=new ArrayList<>();
         al2.add("violit");
         al2.add("red");
         al2.add("white");
@@ -40,11 +40,33 @@ public class Compar {
         al2.add("yellow");
         al2.add("pink");
         al2.add("green");
+
+        /*-----------replace element-------
+        System.out.println("BEFORE replace al2 "+al2);
+        al2.set(03,"--RAINBOW--");
+        System.out.println("AFTER replace al2 "+al2);
+         */
+
+        /* Java program to print all the elements of a ArrayList using the position of the elements*/
+       int numelement=al2.size();
+        System.out.println("position of the elements");
+        for (int i = 0; i <numelement ; i++) {
+            System.out.println(al2.get(i));
+        }
+
+
         /*--------------trim list size----------------
         System.out.println("before trim al2  "+al2);
         al2.trimToSize();
         System.out.println("after trim al2 "+al2);
          */
+        /*<---------------REPLACE THE ELEMENT---------------->
+        System.out.println("before replace al2 "+al2);
+        al2.re
+        System.out.println("after replace al2 "+al2);
+
+         */
+
 
 
         /*<----------------emptylist----------------->
@@ -83,5 +105,18 @@ public class Compar {
             al3.add(al2.contains(e) ? "Yes" : "No");
         System.out.println(al3);
      */
+       /* //capacity incresing using ensure capacity
+        ArrayList<String> al4=new ArrayList<String>(3);
+        al4.add("ball");
+        al4.add("bat");
+        al4.add(" run");
+        System.out.println("Before increasing capacity al4 "+al4);
+        al4.ensureCapacity(7);
+        al4.add("set");
+        al4.add("jet");
+        al4.add("pet");
+        al4.add("wet");
+        System.out.println("After increasing capacity al4 "+al4);
+*/
     }
 }
