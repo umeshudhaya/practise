@@ -1,23 +1,22 @@
 package com.company;
 
-public class Main {
+import java.util.Random;
 
+public class Main {
+    static   char[] otp(int len){
+        System.out.println("Generating the OTP using  Random() :");
+        System.out.print("Your OTP is.....:   ");
+        String num="0123456789";
+        Random ran=new Random();
+        char otp[]= new char[len];
+        for (int i = 0; i <len ; i++) {
+            otp[i]=num.charAt(ran.nextInt(num.length()));
+        }
+        return otp;
+    }
     public static void main(String[] args) {
 	// write your code here
-        try {
-            int age=150;
-            if (age<0||age>=100)
-                throw new Exception();
-            if (age>=18 )
-            {
-                System.out.println("eligible to vote");
-            }
-            else {
-                System.out.println("not eligible to vote");
-            }
-        }catch (Exception e)
-        {
-            System.out.println("some problem ,contact udhaya");
-        }
+        int length=6;
+        System.out.println(otp(length));
     }
 }
